@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "thelicense",
+  "compatibility_date": "2026-06-01",
+  "pages_build_output_dir": "./dist",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  }
+}

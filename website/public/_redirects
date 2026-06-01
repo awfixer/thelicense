@@ -1,0 +1,5 @@
+# No custom redirects yet. This file exists so Cloudflare Pages
+# picks up _headers correctly (both need to be present for Pages
+# to process header rules on first deploy).
+
+# If you add a custom domain later, add redirect rules here.
