@@ -1,17 +1,199 @@
 ---
 import Layout from "@/layouts/main.astro"
-import { Button } from "@/components/ui/button"
 ---
 
 <Layout>
-  <div class="flex min-h-svh p-6">
-    <div class="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-      <div>
-        <h1 class="font-medium">Project ready!</h1>
-        <p>You may now add components and start building.</p>
-        <p>We've already added the button component for you.</p>
-        <Button client:load className="mt-2">Button</Button>
+  <!-- Hero -->
+  <section class="mx-auto max-w-4xl px-5 pt-24 pb-16 text-center">
+    <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-2xl text-primary-foreground">
+      🔥
+    </div>
+    <h1 class="mb-4 text-4xl font-bold tracking-tight sm:text-5xl text-balance">
+      Open source is magic.
+      <br />
+      <span class="text-primary">It's also not free.</span>
+    </h1>
+    <p class="mx-auto mb-8 max-w-xl text-lg text-muted-foreground text-balance leading-relaxed">
+      Sharing code is beautiful. Pretending the commons is self-sustaining
+      doesn't help anyone. The License is a source-available license that
+      lets you share your work <em>and</em> keep it viable.
+      No doom, no gloom — just honest.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <a
+        href="https://github.com/awfixer/thelicense"
+        class="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-6 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.97]"
+      >
+        🧑‍🌾 See the license
+      </a>
+      <a
+        href="#how"
+        class="inline-flex h-10 items-center gap-2 rounded-xl border border-border bg-card px-6 text-sm font-medium text-card-foreground transition-all hover:bg-muted active:scale-[0.97]"
+      >
+        Tell me more
+      </a>
+    </div>
+  </section>
+
+  <!-- The problem stated warmly -->
+  <section id="how" class="mx-auto max-w-4xl px-5 pb-24">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-2xl border border-border bg-card p-6">
+        <div class="mb-3 text-2xl">🌱</div>
+        <h2 class="mb-2 text-lg font-semibold">The garden is real</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          Open source built the internet. It gave us Linux, Python, curl, and
+          a million other things we take for granted. Thousands of people give
+          away their best work for free because they believe in sharing. That's
+          genuine and good.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-border bg-card p-6">
+        <div class="mb-3 text-2xl">🌿</div>
+        <h2 class="mb-2 text-lg font-semibold">The weeds are also real</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          When everyone owns everything, nobody owns anything. Quality fragments.
+          Burnout spreads. Companies extract value without returning it. This
+          isn't a conspiracy — it's entropy. Every shared resource eventually
+          degrades without boundaries.
+        </p>
       </div>
     </div>
-  </div>
+
+    <div class="mt-8 rounded-2xl border border-border bg-card p-6 text-center">
+      <p class="text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
+        <strong class="text-foreground">The takeaway isn't "open source is bad."</strong>
+        <br />
+        It's "let's be honest about the physics of shared resources so we can
+        build things that last."
+      </p>
+    </div>
+  </section>
+
+  <!-- The License as solution -->
+  <section class="bg-primary/5 border-y border-primary/10">
+    <div class="mx-auto max-w-4xl px-5 py-20">
+      <div class="text-center">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+          🛡️ The License
+        </div>
+        <h2 class="mb-4 text-3xl font-bold tracking-tight sm:text-4xl text-balance">
+          Share your work.
+          <br />
+          Keep your options open.
+        </h2>
+        <p class="mx-auto mb-10 max-w-xl text-sm text-muted-foreground leading-relaxed">
+          The AWFixer Source Available License is a practical middle ground
+          between "do whatever you want" and "you can't even look at it."
+          People can see your code, learn from it, use it personally
+          — they just can't build a competing business on your back
+          without paying for a commercial license.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-3">
+        <div class="rounded-xl border border-border bg-card p-5">
+          <div class="mb-2 text-xl">👀</div>
+          <h3 class="mb-1 text-sm font-semibold">Source available</h3>
+          <p class="text-xs text-muted-foreground leading-relaxed">
+            Anyone can read, evaluate, and learn from your code. Transparency
+            isn't the enemy — it's the point.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-border bg-card p-5">
+          <div class="mb-2 text-xl">🧑‍💻</div>
+          <h3 class="mb-1 text-sm font-semibold">Personal use, free</h3>
+          <p class="text-xs text-muted-foreground leading-relaxed">
+            Individuals and small teams (under 10 people or $2M revenue) get
+            full internal use. No license fee. No paperwork.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-border bg-card p-5">
+          <div class="mb-2 text-xl">⏳</div>
+          <h3 class="mb-1 text-sm font-semibold">Four years → AGPL</h3>
+          <p class="text-xs text-muted-foreground leading-relaxed">
+            After four years the license auto-converts to AGPL-3.0. Your code
+            eventually joins the open source commons — on your schedule.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grace period highlight -->
+  <section class="mx-auto max-w-4xl px-5 py-20">
+    <div class="rounded-2xl border-2 border-accent/30 bg-accent/5 p-8 text-center">
+      <div class="mb-3 text-3xl">🌱</div>
+      <h2 class="mb-2 text-xl font-semibold">Growing? No problem.</h2>
+      <p class="mx-auto mb-4 max-w-lg text-sm text-muted-foreground leading-relaxed">
+        If you're a small team that outgrows the personal-use threshold, you
+        get a <strong class="text-foreground">180-day grace period</strong> to
+        sort out a commercial license. No lawsuits. No surprises.
+        Just a handshake and a reasonable timeline.
+      </p>
+      <p class="text-xs text-muted-foreground">
+        We want you to succeed. We just ask that success includes the people
+        who built the tools you're standing on.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ-ish / Tone -->
+  <section class="bg-muted/50 border-y border-border/50">
+    <div class="mx-auto max-w-4xl px-5 py-20">
+      <div class="mx-auto max-w-lg text-center">
+        <h2 class="mb-6 text-2xl font-bold tracking-tight">This isn't a crusade</h2>
+        <div class="space-y-4 text-left text-sm text-muted-foreground leading-relaxed">
+          <p>
+            <strong class="text-foreground">Are you anti-open-source?</strong>
+            <br />
+            Nope. We contribute to open source. We love open source. We just
+            think the <em>only</em> model — "give it all away forever,
+            no questions asked" — isn't the <em>only</em> model.
+          </p>
+          <p>
+            <strong class="text-foreground">Is this about AI?</strong>
+            <br />
+            Partly. The license explicitly restricts AI training on your code
+            without permission. If you want your work to stay out of training
+            pipelines, this gives you a legal basis to say no.
+          </p>
+          <p>
+            <strong class="text-foreground">Is this a corporation thing?</strong>
+            <br />
+            Not really. It's for anyone who wants to share sustainably.
+            Solo devs. Small teams. Open source projects that want a
+            commercial option without changing their whole identity.
+          </p>
+          <p>
+            <strong class="text-foreground">Can I use this for my project?</strong>
+            <br />
+            Absolutely. The license text is right there in the repo. Fork it,
+            adapt it, use it. We'd love to know what you think.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-4xl px-5 py-20 text-center">
+    <div class="mb-4 text-3xl">☕</div>
+    <h2 class="mb-3 text-2xl font-bold tracking-tight">
+      Pull requests welcome
+    </h2>
+    <p class="mx-auto mb-6 max-w-md text-sm text-muted-foreground leading-relaxed">
+      Eye rolls also welcome, but less useful. The license is a living
+      document — help us make it better.
+    </p>
+    <a
+      href="https://github.com/awfixer/thelicense"
+      class="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-6 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.97]"
+    >
+      🐙 View on GitHub
+    </a>
+  </section>
 </Layout>
