@@ -1,12 +1,29 @@
 {
   "name": "thelicense",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "workspaces": {
+    "packages": [
+      ".",
+      "website"
+    ]
+  },
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt --write",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint --fix"
+  },
+  "dependencies": {
+    "typescript": "latest"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.3.14",
+    "@types/node": "^25.9.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260527.2",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^6"
   }
 }
